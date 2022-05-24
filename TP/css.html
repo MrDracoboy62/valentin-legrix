@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Feuille CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- C'est ici que se situe le lien relatif vers la feuille de style (ou stylesheet) -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../styles/main.css"
+    />
+  </head>
+  <body>
+    <h1>Organisation CSS</h1>
+    <!--Utiliser l'attribut class pour définir un id pour le CSS-->
+    <h1 class="cl">Test CSS</h1>
+    <h1 class="cl">Afin d'en créer une page</h1>
+    <!-- Il est possible de définir un style différent auprès du dernier "enfant" de la classe avec last-child-->
+    <h1 class="cl">Second test</h1>
+    <!-- Structure pour créer un projet-->
+    <p>
+      Créer un dossier projet: <br />
+      HTML/ JS + Stylesheet (css) + Images
+    </p>
+    <!--Principe de "sélecteur"-->
+    <p>
+      Un sélecteur = la balise (ou l'élément) concernée <br />
+      Par exemple p {color: blue;} a pour sélecteur p.
+    </p>
+    <h2>
+      Autre exemple => h2 {text-align :center;} a pour sélecteur h2 et met le
+      texte affiché au centre de la page.
+    </h2>
+    <p>
+      Il est possible de changer de style sur la balise juste en changeant le
+      nom de sa classe, à condition que chacunes des classes possèdent une
+      configuration CSS dans le stylesheet.
+    </p>
+    <!-- Utilisation des sélecteurs d'IDentifiants CSS -->
+    <p id="classe2">
+      Lorsqu'une balise possède un id en attribut, il est possible de lui donner
+      un style CSS de la manière suivante: <br />
+      #classe2 { text-align: center;}
+    </p>
+    <p>
+      Important à différencier: la classe possède un style qui s'écrit avec
+      <strong>.classe</strong> <br />tandis que l'id s'écrit avec
+      <strong>#id</strong>
+    </p>
+    <p>
+      Autre chose: si un code doit s'écrire en plusieurs, il faut le factoriser
+      (n'en écrire qu'une seule version).
+    </p>
+    <p>
+      Il est possible d'ajouter plus de style sur une balise si celle-ci possède
+      une classe et une id dont les options de style n'entrent pas en conflit
+      avec celles de la balise.<br />
+      Par exemple si p possède le style p {background-color: blue;} et que l'une
+      des balises p de la page possède la classe para1 et l'id para, on peut lui
+      rajouter du style "personnalisé", malgré que d'autres balises p soient
+      présentes.
+    </p>
+    <br />
+    <p class="para1">Par exemple ce morceau de phrase</p>
+    <p id="para">ainsi que celui-ci</p>
+    <p>
+      auront un style différent malgré qu'ils soient tout les deux issus d'une
+      balise p.
+    </p>
+    <!-- Ordre de priorité en style CSS -->
+    <p class="strong">
+      Règle de priorité en CSS: Tout ce qui vient ensuite dans la fiche de style
+      est prioritaire (donc si une balise possède deux options de style, le
+      second sera pris en compte uniquement, sauf cas spécifiques).
+    </p>
+    <!-- Explication de la priorité des classes et id par rapport aux simples balises en CSS-->
+    <p>
+      Voici des exemples de règles qui ne dépendent pas de la mécanique
+      précédente:<br />
+      Lorsqu'un attribut, une classe ou un id possède un style différent de la
+      balise de base, malgré le même type de style, étant donné la précision du
+      sélecteur, leur style est prioritaire sur la balise.<br />
+      Si on a une balise p {color:black;} avec un #para {color:red;} la balise
+      portant l'id aura sa couleur en rouge, malgré qu'elle soit une balise p.
+    </p>
+    <h2>
+      Une classe ou un id (un sélecteur en gros) sera prioritaire en CSS par
+      rapport à la balise de base
+    </h2>
+    <p>
+      Il est également possible de regoruper plusieurs balises au sein d'un même
+      groupe de style, comme par exemple regrouper:<br />
+      th, td {color:red;} afin que chaque th et td aient leur texte en rouge.
+    </p>
+    <table>
+      <tr>
+        <th>Coucou</th>
+        <th>Je suis</th>
+        <th>un tableau</th>
+      </tr>
+      <tr>
+        <td>J'ai comme</td>
+        <td>couleur</td>
+        <td>le rouge</td>
+      </tr>
+      <!-- Cette partie là permet d'expliquer le principe CSS de table {background:url("lien")}-->
+      <tr>
+        <td>J'ai surtout</td>
+        <td>une rocket</td>
+        <td>en fond</td>
+      </tr>
+    </table>
+    <!-- Chose à savoir pour ce qui suit: nous écrivons nos nombres en base 10 habituellement (décimal) mais on peut aussi les écrire en hexadécimal (base 16) et cela se fait avec les chiffres de 0 à 9 puis de A à F pour de 11 à 15-->
+    <p>On peut aussi colorer de deux autres manières différentes:<br /></p>
+    <ul>
+      <li>
+        Avec une écriture
+        <p class="rgb">rgb(X,Y,Z,A)</p>
+        où X Y et Z sont des nombres compris entre 0 et 255 et A un nombre
+        décimal entre 0 et 1 (pour l'opacité);
+      </li>
+      <!-- Pour ceux qui veulent calculer un nombre décimal en hexadécimal, il suffit de diviser votre nombre par 16 et avoir son reste, par exemple 152 en décimal devient 98 en hexadécimal car 152 = 9x16 + 8-->
+      <li>
+        Avec une écriture
+        <p class="diez">#XYZA</p>
+        où chacunes des variables s'écrit en hexadécimal (valeur entre 0 et F,
+        signifiant 15 en base décimale) avec X Y et Z pour la couleur et A
+        l'opacité (00 = blanc et FF = noir).
+      </li>
+    </ul>
+    <p>
+      Si l'on veut avoir une image ou un gif en fond (de page ou de balise) on
+      peut assigner à cette balise (cf ligne 109):<br />
+      table {background-image:url("lien");}.<br />
+      On peut aussi faire en sorte que l'image n'apparaissent pas en mosaïque
+      avec background-repeat: no-repeat; ou l'agrandir à la taille de la balise
+      (ou du body) avec background-size: cover; (le soucis c'est qu'une image
+      trop grande ou avec une largeur ou une longueur plus large que l'autre va
+      être tronquée).
+    </p>
+    <!-- Moyen de voir une image sur un paragraphe sans contenu de lecture, mais avec contenu en html-->
+    <p class="test">
+      &nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />
+    </p>
+    <p class="pos">&nbsp;<br />
+      L'option background-position permet de positionner une image dans un
+      recoin de la page. Par exemple, right-top positionne l'image en haut à
+      droite.<br />
+      Pour éviter une mosaïque (ou une répétition) il faut désactiver sa
+      répétition avec background-repeat: no-repeat;<br />
+      Il est également possible de positionner l'image selon une distance en px
+      ou en % depuis la gauche ou le haut de la page.&nbsp;<br />&nbsp;<br />
+    </p>
+    <p>
+      Il est possible de positionner une image de manière calculée en
+      soustrayant la valeur 100% de taille avec le nombre de pixel voulu, pour
+      par exemple la positionner à 100px du côté droite de la page, peu importe
+      le support.
+    </p>
+    <p>Le background-size permet de redimensionner le fond, elle peut avoir pour valeur auto (donc image de base),
+        cover (étirement ou tronc de l'image pour couvrir toute la zone), percentage (pour la redimensionner selon un %age),
+        avec les valeurs de width et height directement, en pixel (px) ou pourcentage (%).
+    </p>
+    <p class="img"><strong>Ce texte servira à tester les limites d'une image en fond.</strong><br /><br /><br /><br /></p>
+    <!-- Les balises div combinées au .parallax du css permettent de faire défiler plusieurs image avec le scroll-->
+<div class="parallax parallax1">
+</div><br />
+<div class="parallax parallax2">
+</div><br />
+<div class="parallax parallax3">
+</div><br />
+</body>
+</html>
