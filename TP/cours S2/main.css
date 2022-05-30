@@ -1,6 +1,6 @@
 @font-face {
 font-family: "AnekOdia";
-src: url("../fonts/AnekOdia/static/AnekOdia/AnekOdia-ExtraBold.ttf");
+src: url("AnekOdia/static/AnekOdia/AnekOdia-ExtraBold.ttf");
 }
 .cl {
     background: rgb(65,237,148,0.5);
@@ -36,30 +36,30 @@ h2 {
     text-align: center;
 }
 .deco {
-    background-image:url("../image/imageBS.gif");
+    background-image:url("image/imageBS.gif");
     background-repeat: no-repeat;
     background-position: center;
 }
 .tab { background: #010B2E;
-background-image:url("../image/bg.jpg");  
+background-image:url("image/bg.jpg");  
 background-repeat: no-repeat;
  background-position: center;
 color:white;
 }
 .test {
     background: #010B2E;
-    background-image:url("../image/bg.jpg");
+    background-image:url("image/bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
 }
 .pos {
-    background-image:url("../image/tel.png");
+    background-image:url("image/tel.png");
     background-position: calc(100% - 25px);
     background-repeat: no-repeat;
     border: 1px solid orange;
 }
 .img {
-    background-image:url("../image/pc.jpg");
+    background-image:url("image/pc.jpg");
     background-size: 5%;
     background-repeat: repeat-x;
     border: 1px solid black;
@@ -78,13 +78,13 @@ color:white;
     border-radius: 15px;
   }
   .parallax1 {
-    background-image:url("../image/lac1.jpg");
+    background-image:url("image/lac1.jpg");
   }
   .parallax2 {
-    background-image:url("../image/foret.jpg");
+    background-image:url("image/foret.jpg");
   }
   .parallax3 {
-    background-image:url("../image/mont.jpg");
+    background-image:url("image/mont.jpg");
   }
   .bordure {
       border: 1px dotted blue;
@@ -171,7 +171,7 @@ a:hover {
     list-style-type: square;
 }
 .lsimg {
-    list-style-image: url('../image/ballon.png');
+    list-style-image: url('image/ballon.png');
 }
 .lspos {
     list-style-position: outside;

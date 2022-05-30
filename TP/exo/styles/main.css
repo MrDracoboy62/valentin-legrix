@@ -1,0 +1,47 @@
+body {
+    background: rgb(110, 87, 87);
+}
+.par
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    color: white;
+    gap: 10px;
+    border: 1px solid black;
+    background: white;
+    align-items: stretch; 
+}
+.preum
+{
+    background: red;
+    color: black;
+}
+.preum:hover
+{
+    background:pink;
+    opacity: 0.5;
+    color:black;
+}
+.deuz 
+{
+    background: green;
+}
+.deuz:hover
+{
+    background:pink;
+    opacity: 0.5;
+    color: black;
+}
+.troaz 
+{
+    background: blue;
+    color: rgb(211, 211, 211);
+}
+.troaz:hover
+{
+    background:pink;
+    opacity: 0.5;
+    color:black;
+}

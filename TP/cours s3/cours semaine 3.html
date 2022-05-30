@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Cours S3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="styles/s3.css"
+    />
+  </head>
+  <body>
+    <h1 id="sommaire" class="h">Sommaire</h1>
+    <ol>
+      <li><a href="#pos">Le Positionnement</a></li>
+      <li><a href="#float">Le Float</a></li>
+      <li><a href="#psel">Le Pseudo-Elément</a></li>
+      <li><a href="#flex">Le Flex-box</a></li>
+      <li><a href="#mqu">Le Media query</a></li>
+    </ol>
+    <h2 id="pos" class="h">
+      Le Positionnement<a href="#sommaire"
+        ><img
+          src="../cours s2/image/fleche.png"
+          width="25"
+          height="25"
+          alt="Revenir au menu"
+      /></a>
+    </h2>
+    <p>
+      L'attribut position d'une balise div permet de définir son emplacement par
+      rapport à la page:<br />
+    </p>
+    <!-- Ici le positionnement de la première div se scale sur la taille des pc de l'afpa, soit 17"-->
+    <div class="div" id="abs">
+      - position: absolute; permet de placer la div aux coordonnées 0;0 de la
+      page (donc en haut à gauche);
+      <!-- Les coordonnées de la feuille de style permettent de le positionner à l'emplacement voulu, donc entre le texte précédent et la seconde div-->
+    </div>
+    <div class="div" id="rel">
+      - position: relative; permet de placer la div à des coordonnées précises
+      et marquées. Par défaut elle est positionnées en coordonnées 0;0
+      (haut-gauche);
+    </div>
+    <div class="div" id="sti">
+      - position: sticky; permet de placer la div entre les positions relative
+      et absolute par défaut. Dès qu'elle atteint le haut de la pge, elle suit
+      le scroll down de la page, jusqu'à ce qu'on revienne à sa position
+      initiale;
+    </div>
+    <div class="div" id="fix">
+      - position: fixed; permet de placer la div sans qu'elle ne bouge, y
+      compris en descendant sur la page.
+    </div>
+    <p>
+      De manière générale, il faut mentionner la propriété position avec l'une
+      des valeurs possibles.<br />
+      Le positionnement est un décalage par rapport à la position d'origine
+      (position: static; par défaut). Il doit être utilisé comme dernier
+      recours.<br />
+      On peut positionner chacune de ces options avec top/bottom: xpx et
+      left/right: xpx; où x peut être négatif.<br />
+    </p>
+    <h2 id="float" class="h">
+      Le Float<a href="#sommaire"
+        ><img
+          src="../cours s2/image/fleche.png"
+          width="25"
+          height="25"
+          alt="Revenir au menu"
+      /></a>
+    </h2>
+    <p>
+      Avec la propriété float, il est possible de positionner plusieurs zones
+      dans un ordre:<br />
+    </p>
+    <div class="left">float: left; affichera le texte à gauche.</div>
+    <div class="left">
+      Placer un second texte en left le placera entre les deux premiers.
+    </div>
+    <div class="right">float: right; placera le texte à droite.</div>
+    <div class="right">
+      Placer un second texte en right le placera entre les deux derniers.
+    </div>
+    <br />
+    <p>
+      La propriété clear: left, right ou both; permet d'annuler l'effet de
+      flottement.
+    </p>
+    <br />
+    <h2 id="psel" class="h">
+      Le Pseudo-Elément<a href="#sommaire"
+        ><img
+          src="../cours s2/image/fleche.png"
+          width="25"
+          height="25"
+          alt="Revenir au menu"
+      /></a>
+    </h2>
+    <p class="pseudo">
+      Les Pseudo-Elément permettent de créer du style dans des éléments d'un
+      texte:<br />
+      p::first-ligne {color:red; text-transform:uppercase;} permet de mettre en
+      rouge et en majuscule la première phrase de l'élément p.<br />
+      p::first-letter {padding-left: 1rem; font-size: 2rem; font-weight: bold;}
+      permet de mettre le première lettre en gras avec une plus grande taille et
+      un décalage sur la droite de 1 pixel.
+    </p>
+    <p>
+      On peut utiliser la propriété opacity avec un nombre compris entre 0 et 1
+      pour rendre un élément plus (1) ou moins (0) opaque:<br />
+    </p>
+    <button>Appuyer</button>
+    <p class="opacity">
+      Ce bouton a opacity:0.5; à l'affichage, mais devient opacity:1.0;
+      lorsqu'il est survolé grâce à l'attribut button:hover.
+    </p>
+    <h2 id="flex" class="h">
+      Le flex-box<a href="#sommaire"
+        ><img
+          src="../cours s2/image/fleche.png"
+          width="25"
+          height="25"
+          alt="Revenir au menu"
+      /></a>
+    </h2>
+    <p>
+      Il existe de multitudes d'attributs relatifs au positionnement du
+      container (celui qui englobe les box):
+      <!-- cf le site https://css-tricks.com/snippets/css/a-guide-to-flexbox/-->
+    </p>
+    <h4>Les propriétés parent:</h4>
+    <ol>
+      <li>
+        flex-direction: row/column (reverse); permet d'organiser les box en
+        ligne/colonne (inversé);
+      </li>
+      <li>
+        flex-wrap:nowrap/wrap/wrap-reverse; permet le retour à la ligne lorsque
+        les éléments doivent la dépasser
+      </li>
+      <li>
+        flex-flow:row nowrap; est un raccourci des deux propriétés précédentes.
+        La valeur inscrite est celle par défaut.
+      </li>
+      <li>
+        justify-content permet d'organiser les box selon un certain paterne:
+        <ul>
+          <li>
+            flex-start; permet de les coller à partir de la gauche de la page
+          </li>
+          <li>
+            flex-end; permet de les coller à partir de la droite de la page
+          </li>
+          <li>center; permet de les centraliser sur la page</li>
+          <li>
+            space-between; permet de séparer chaque élément de la même distance
+          </li>
+          <li>
+            space-around; permet d'avoir autant d'espace autour de chaque
+            élément
+          </li>
+          <li>
+            space-evenly; permet d'espacer chaque élément et chaque bordure à la
+            même distance
+          </li>
+        </ul>
+      </li>
+      <li>
+        align-items permet d'organiser le positionnement des box par rapport à
+        d'autres éléments:
+      </li>
+      <ul>
+        <li>flex-start; permet aux éléments d'être collés au top de la page</li>
+        <li>
+          flex-end; permet aux éléments d'être collés au bottom de la page
+        </li>
+        <li>
+          center; permet aux éléments d'être positionné à partir du centre de la
+          page
+        </li>
+        <li>
+          stretch; permet aux éléments de prendre toute la place verticale
+          possible
+        </li>
+        <li>
+          baseline; permet aux éléments de s'aligner entre eux sur leur ligne de
+          texte
+        </li>
+      </ul>
+      <li>
+        align-content permet d'organiser un groupe de box au sein d'une box
+      </li>
+      <ul>
+        <li>flex-start; permet aux éléments d'être collés au top de la page</li>
+        <li>
+          flex-end; permet aux éléments d'être collés au bottom de la page
+        </li>
+        <li>
+          center; permet aux éléments d'être positionné à partir du centre de la
+          page
+        </li>
+        <li>
+          stretch; permet aux éléments de prendre un maximum de place verticale
+          possible, la même que le plus grand élément disponible
+        </li>
+        <li>
+          space-between; permet de séparer chaque élément de la même distance
+        </li>
+        <li>
+          space-around; permet d'avoir autant d'espace autour de chaque élément
+        </li>
+      </ul>
+      <li>gap permet d'organiser l'espace autour des box:</li>
+      <ul>
+        <li>
+          gap: xpx ypx; permet de séparer chaque box par un espace x à
+          l'horizontal et y à la verticale
+        </li>
+        <li>
+          row-gap: xpx; permet de séparer chaque box par un espace x à
+          l'horizontal seulement
+        </li>
+        <li>
+          column-gap: ypx; permet de séparer chaque box par un espace y à la
+          verticale seulement
+        </li>
+      </ul>
+    </ol>
+    <h4>Les propriétés enfants:</h4>
+    <ol>
+      <li>
+        order: x; permet d'attribuer un ordre à une certaine box. Une valeur
+        négative décroit son importance, et deux valeurs identiques seront
+        placées l'une après l'autre.
+      </li>
+      <li>
+        flex-grow: x; permet d'obtenir x fois la taille de base lorsqu'on doit
+        répartir la taille de toutes les box à la valeur 1 de base (donc x=2
+        pour 3 box => cette box aura deux fois la taille des deux autres) /!\
+        pas de valeur négative.
+      </li>
+      <li>
+        flex-shrink: x; permet d'obtenir 1/x fois la taille de base lorsqu'on
+        doit répartir la taille de toutes les box à la valeur 1 de base (donc
+        x=2 pour 3 box => cette box aura la moitié de la taille des deux autres)
+        /!\ pas de valeur négative.
+      </li>
+      <li>
+        flex-basis: auto; permet de définir à partir de quoi les espacements
+        seront répartis
+      </li>
+      <li>flex est un raccourci des trois propriétés précédentes</li>
+      <li>
+        align-self: auto/flex-start/flex-end/center ; permet d'aligner
+        différemment plusieurs éléments enfants au sein d'un même container,
+      </li>
+    </ol>
+    <p>Pour déterminer comment agancer selon quel flex, il y a 4 règles à connaitre:
+        <div class="regle">
+            <div class="one">1) Il faut distinguer les éléments-enfants des éléments-parents</div>
+            <div class="two">2) Faire un display: flex; sur l'élément-parent</div>
+            <div class="three">3) Choisir le style d'affichage de l'élément-parent (horizontal et vertical)</div>
+            <div class="four">4) Définir l'affichage des éléments-enfants au sein de leur élément-parent</div>
+        </div>
+    <br /><br />
+    <div class="site">
+        <header>Téma la tronche de ce truc</header>
+        <main>Je sais pas par où commencer</main>
+        <aside class="left-sidebar">Moi jme fous à gauche</aside>
+        <aside class="right-sidebar">Et moi à droite</aside>
+        <footer>J'ai qu'un pied mais jle vis bien</footer>  
+      </div>
+      <h2 id="mqu" class="h">
+        Le Media Query<a href="#sommaire"
+          ><img
+            src="../cours s2/image/fleche.png"
+            width="25"
+            height="25"
+            alt="Revenir au menu"
+        /></a></h2>
+        <p>Les Media Query permettent à la page de s'adapter selon la taille de l'écran du client (téléphone, ordinateur, iphone, etc)</p>
+    </p>
+  </body>
+</html>

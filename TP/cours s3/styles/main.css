@@ -1,0 +1,22 @@
+h2 {
+    text-align: center;
+}
+div.{
+    display: inline-block;
+}
+#abs {
+    position: absolute;
+    background: blue;
+}
+#rel {
+    position:relative;
+    background:red;
+}
+#sti {
+    position:sticky;
+    background:green;
+}
+#fix {
+    position:fixed;
+    background: yellow;
+}
