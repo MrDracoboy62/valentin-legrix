@@ -3,119 +3,126 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="keywords" content="cours html, dev web" />
-    <meta name="description" content="Le meilleur site pour les tuto web" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="exo/styles/cv.css"
+    />
     <title>Un CV</title>
-    <style>
-      #ul {
-        border-bottom: 2px solid black;
-      }
-      p {
-        font-size: 15px;
-      }
-      a {
-        text-decoration: none;
-        color: blue;
-      }
-    </style>
   </head>
   <body>
-    <header>
-      <h1>Moi-même</h1>
-      <img src="image/photo-avatar-mini.jpg" />
-    </header>
-    <main>
-      <div>
-        <section>
-          <h1 id="ul">Mon Expérience</h1>
-          <h2>Titre 1</h2>
-          <h3>Entreprise</h3>
-          <br />
-          <h4>de 2000 à 2000 personnes</h4>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-            alias quos beatae labore provident perspiciatis consequatur
-            obcaecati necessitatibus nobis voluptas ipsa quam numquam facilis
-            reiciendis reprehenderit voluptatum natus vero quod.
-          </p>
-          <h2>Titre 2</h2>
-          <h3>Entreprise</h3>
-          <br />
-          <h4>de 2000 à 2000 personnes</h4>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-            alias quos beatae labore provident perspiciatis consequatur
-            obcaecati necessitatibus nobis voluptas ipsa quam numquam facilis
-            reiciendis reprehenderit voluptatum natus vero quod.
-          </p>
-          <h2>Titre 3</h2>
-          <h3>Entreprise</h3>
-          <br />
-          <h4>de 2000 à 2000 personnes</h4>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-            alias quos beatae labore provident perspiciatis consequatur
-            obcaecati necessitatibus nobis voluptas ipsa quam numquam facilis
-            reiciendis reprehenderit voluptatum natus vero quod.
-          </p>
-        </section>
-        <section>
-          <h1 id="ul">Mes Compétences</h1>
-          <ul>
-            <li>HTML5 et CSS3</li>
-            <li>
-              Recherches
-              <a href="image/https://www.google.com/" target="_blank">Google</a>
-              niveau avancé
-            </li>
-            <li>Lorem</li>
-            <li>Ipsum</li>
-          </ul>
-          <img src="image/logo-html5.png" /><img src="image/logo-css.png" /><img
-            src="image/logo-js.png"
-          /><img src="image/logo-chrome.png" /><br />
-        </section>
-        <section>
-          <h1 id="ul">Ma Formation</h1>
-          <h2>Titre 1</h2>
-          <h3>Entreprise</h3>
-          <br />
-          <h4>de 2000 à 2000 personnes</h4>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-            alias quos beatae labore provident perspiciatis consequatur
-            obcaecati necessitatibus nobis voluptas ipsa quam numquam facilis
-            reiciendis reprehenderit voluptatum natus vero quod.
-          </p>
-          <h2>Titre 2</h2>
-          <h3>Entreprise</h3>
-          <br />
-          <h4>de 2000 à 2000 personnes</h4>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-            alias quos beatae labore provident perspiciatis consequatur
-            obcaecati necessitatibus nobis voluptas ipsa quam numquam facilis
-            reiciendis reprehenderit voluptatum natus vero quod.
-          </p>
-          <h2>Titre 3</h2>
-          <h3>Entreprise</h3>
-          <br />
-          <h4>de 2000 à 2000 personnes</h4>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-            alias quos beatae labore provident perspiciatis consequatur
-            obcaecati necessitatibus nobis voluptas ipsa quam numquam facilis
-            reiciendis reprehenderit voluptatum natus vero quod.
-          </p>
-        </section>
+    <div class="container">
+    <h1 class="box">Développeur Web</h1>
+  </div>
+    <div class="photo">
+      LEGRIX Valentin<br />
+      30 ans <br />
+      @: legrix.valentin@hotmail.fr<br />
+      Tel: 06 34 44 34 04<br />
+      Permis B
+    </div>
+    <div>
+      <h1 id="ul">Mon Expérience</h1>
+      <div class="anim">
+        <h2>Animateur Informatique</h2>
+        <h3>Mission Locale (Calais)</h3>
+        <h4>12 mois de décembre 2015 à décembre 2016</h4>
+        <p>
+          Animation de groupe, initiation à l'utilisation de l'outil<br /> Word
+          
+          pour création de CV et de lettre de motivation
+        </p>
+        <p>
+          Entretien du matériel informatique <br />(ordinateurs, imprimantes, réseau)
+        </p>
       </div>
-    </main>
-    <footer>&nbsp;</footer>
+      <div class="mapo">
+        <h2>Web Master</h2>
+        <h3>MapOrientation</h3>
+        <h4>1 mois de août 2013 à septembre 2013</h4>
+        <p>Développement du site de l'entreprise (JavaScript, Html, Css)</p>
+      </div>
+    </div>
+    <div>
+      <h1 id="ul">Ma Formation</h1>
+      <div class="bac">
+        <h2>Bac Scientifique</h2>
+        <h3>Lycée Léonard de Vinci (Calais)</h3>
+        <h4>Obtenu en 2010</h4>
+        <p>Bac Scientifique avec spécialité Mathématiques</p>
+      </div>
+      <div class="lic">
+        <h2>Licence Maths</h2>
+        <h3>ULCO Calais</h3>
+        <h4>de septembre 2011 à juin 2012</h4>
+        <p>Première année de Licence Mathématiques</p>
+      </div>
+      <div class="dut">
+        <h2>DUT Gestion d'Entreprise</h2>
+        <h3>IUT Calais</h3>
+        <h4>de septembre 2012 à juin 2013</h4>
+        <p>Première année de DUT Gestion d'Entreprise</p>
+      </div>
+      <div class="prep">
+        <h2>Formation Web Prépress</h2>
+        <h3>ULCO Calais</h3>
+        <h4>de novembre 2013 à mars 2014</h4>
+        <p>
+          Formation Web PréPress <br />(création de site et manipulation de
+          logiciel montage photo/vidéo)
+        </p>
+      </div>
+    </div>
+    <div>
+      <h1 id="ul" class="compet">Mes Compétences</h1>
+      <div class="comp">
+        <ul>
+          <li>HTML5, CSS3 et JavaScript</li>
+          <li>
+            Recherches
+            <a href="../image/https://www.google.com/" target="_blank"
+              >Google</a
+            >
+            niveau avancé
+          </li>
+          <li>Utilisation de Photoshop, Word et Excel</li>
+          <li>Anglais niveau avancé</li>
+        </ul>
+      </div>
+      <div class="logo">
+        <div class="html"><img src="../image/logo-html5.png" /></div>
+        <div class="css"><img src="../image/logo-css.png" /></div>
+        <div class="js"><img src="../image/logo-js.png" /></div>
+        <div class="chrome"><img src="../image/logo-chrome.png" /><br /></div>
+      </div>
+      <h1 id="ul">Infos Complémentaires</h1>
+      <div class="footer">
+        <div class="gh">
+          Pour plus d'informations, vous pouvez visiter <br />
+          mon répertoire sur GitHub:<br />
+          <a
+            href="https://github.com/MrDracoboy62/valentin-legrix"
+            target="_blank"
+          >
+            <img src="../image/git.png" width="50" height="50" target="_blank"
+          /></a>
+        </div>
+        <div class="foot">
+          Travaille aux côtés de créateurs particuliers<br />
+          dans le domaine du jeu-vidéo : Pokémon Steam <br />
+          <a
+            href="https://pokemon-steam1.fandom.com/fr/wiki/Wiki_Pok%C3%A9mon_Steam"
+            target="_blank"
+            ><img
+              src="../image/steam.png"
+              width="50"
+              height="50"
+              alt="Index du jeu"
+          /></a>
+        </div>
+      </div>
+      <!--Je ferme footer-->
+    </div>
   </body>
 </html>

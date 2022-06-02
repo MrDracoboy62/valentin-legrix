@@ -47,7 +47,7 @@
     </div>
     <div class="div" id="sti">
       - position: sticky; permet de placer la div entre les positions relative
-      et absolute par défaut. Dès qu'elle atteint le haut de la pge, elle suit
+      et absolute par défaut. Dès qu'elle atteint le haut de la page, elle suit
       le scroll down de la page, jusqu'à ce qu'on revienne à sa position
       initiale;
     </div>
@@ -130,7 +130,7 @@
     <p>
       Il existe de multitudes d'attributs relatifs au positionnement du
       container (celui qui englobe les box):
-      <!-- cf le site https://css-tricks.com/snippets/css/a-guide-to-flexbox/-->
+      <!-- cf le site https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
     </p>
     <h4>Les propriétés parent:</h4>
     <ol>
@@ -259,30 +259,93 @@
         différemment plusieurs éléments enfants au sein d'un même container,
       </li>
     </ol>
-    <p>Pour déterminer comment agancer selon quel flex, il y a 4 règles à connaitre:
-        <div class="regle">
-            <div class="one">1) Il faut distinguer les éléments-enfants des éléments-parents</div>
-            <div class="two">2) Faire un display: flex; sur l'élément-parent</div>
-            <div class="three">3) Choisir le style d'affichage de l'élément-parent (horizontal et vertical)</div>
-            <div class="four">4) Définir l'affichage des éléments-enfants au sein de leur élément-parent</div>
-        </div>
+    <p>
+      Pour déterminer comment agancer selon quel flex, il y a 4 règles à
+      connaitre:
+    </p>
+    <div class="regle">
+      <div class="one">
+        1) Il faut distinguer les éléments-enfants des éléments-parents
+      </div>
+      <div class="two">2) Faire un display: flex; sur l'élément-parent</div>
+      <div class="three">
+        3) Choisir le style d'affichage de l'élément-parent (horizontal et
+        vertical)
+      </div>
+      <div class="four">
+        4) Définir l'affichage des éléments-enfants au sein de leur
+        élément-parent
+      </div>
+    </div>
     <br /><br />
     <div class="site">
-        <header>Téma la tronche de ce truc</header>
-        <main>Je sais pas par où commencer</main>
-        <aside class="left-sidebar">Moi jme fous à gauche</aside>
-        <aside class="right-sidebar">Et moi à droite</aside>
-        <footer>J'ai qu'un pied mais jle vis bien</footer>  
-      </div>
-      <h2 id="mqu" class="h">
-        Le Media Query<a href="#sommaire"
-          ><img
-            src="../cours s2/image/fleche.png"
-            width="25"
-            height="25"
-            alt="Revenir au menu"
-        /></a></h2>
-        <p>Les Media Query permettent à la page de s'adapter selon la taille de l'écran du client (téléphone, ordinateur, iphone, etc)</p>
+      <header>Téma la tronche de ce truc</header>
+      <main>Je sais pas par où commencer</main>
+      <aside class="left-sidebar">Moi jme fous à gauche</aside>
+      <aside class="right-sidebar">Et moi à droite</aside>
+      <footer>J'ai qu'un pied mais jle vis bien</footer>
+    </div>
+    <h2 id="mqu" class="h">
+      Le Media Query<a href="#sommaire"
+        ><img
+          src="../cours s2/image/fleche.png"
+          width="25"
+          height="25"
+          alt="Revenir au menu"
+      /></a>
+    </h2>
+    <!-- Cette méthode n'est plus utilisée, elle sert juste à expliquer le principe-->
+    <p>
+      Les Media Query permettent à la page de s'adapter selon la taille de
+      l'écran du client en lisant sa capacité (téléphone, ordinateur, iphone,
+      etc).<br />
+      On écrit cet attribut de la manière suivante: <br />
+      @media screen and (min/max-width: Xpx); où X est la valeur en pixel de la
+      taille du support lecteur; ou encore @media screen and (min-width: xpx)
+      and (max-width: ypx)<br />
+      où x est inférieur à y, et où l'écran s'adapte à des valeurs de taille
+      comprises entre x et y pixels.
+    </p>
+    <h4>Les tailles d'écrans les plus répandues (only BootStrap)</h4>
+    <table>
+      <tr>
+        <th>Intervalle en pixel</th>
+        <th>Syntaxe</th>
+      </tr>
+      <tr>
+        <td>[...;575]</td>
+        <td>@media (max-width:575px)</td>
+      </tr>
+      <tr>
+        <td>[576;768]</td>
+        <td>@media (min-width:576px) and (max-width:768px)</td>
+      </tr>
+      <tr>
+        <td>[769;992]</td>
+        <td>@media (min-width:769px) and (max-width:992px)</td>
+      </tr>
+      <tr>
+        <td>[993;1200]</td>
+        <td>@media (min-width:993px) and (max-width:1200px)</td>
+      </tr>
+      <tr>
+        <td>[1201;...]</td>
+        <td>@media (min-width:1201px)</td>
+      </tr>
+    </table>
+    <h2 id="" class="h">
+      <a href="#sommaire"
+        ><img
+          src="../cours s2/image/fleche.png"
+          width="25"
+          height="25"
+          alt="Revenir au menu"
+      /></a>
+    </h2>
+    <p>
+      Pour aligner des éléments, on utilise margin:auto;. Pour qu'une image
+      remplisse son parent, il faut la mettre en display: block; (pour l'enfant,
+      pas son parent) [on peut rajouter width: 100%; si besoin]
     </p>
   </body>
 </html>
